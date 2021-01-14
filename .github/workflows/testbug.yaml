@@ -5,7 +5,7 @@ on:
 
 jobs:
   curl-test:
-    environment: displayed🥑sdf
+    environment: displ
     runs-on: ubuntu-latest
     steps:
       - name: fedora curl testing
