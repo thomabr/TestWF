@@ -6,7 +6,7 @@ on:
 jobs:
   curl-test:
     environment: tast2
-    runs-on: ubuntu-latest
+    runs-on: asdfubuntu-latest
     steps:
       - name: fedora curl testing
         run: |
