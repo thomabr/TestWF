@@ -6,8 +6,8 @@ on:
 jobs:
   curl-test:
     environment: tast2
-    runs-on: asdfubuntu-latest
-    steps:
+    runs-on: ubuntu-latest
+    stepas:
       - name: fedora curl testing
         run: |
           curl -v "https://mirrors.fedoraproject.org/metalink?repo=fedora-modular-32&arch=x86_64" 
