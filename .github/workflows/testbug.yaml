@@ -5,7 +5,7 @@ on:
 
 jobs:
   curl-test:
-    environment: displ
+    environment: displayed 🥑 approvals could
     runs-on: ubuntu-latest
     steps:
       - name: fedora curl testing
