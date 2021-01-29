@@ -6,7 +6,7 @@ on:
 
 jobs:
   curl-test:
-    environment: displayed approvals could!
+    environment: newcreatedone
     runs-on: ubuntu-latest
     steps:
       - name: fedora curl testing
