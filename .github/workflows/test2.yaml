@@ -1,0 +1,14 @@
+name: test fedora curl2
+
+on:
+  workflow_dispatch:
+  # Inputs the workflow accepts.
+
+jobs:
+  curl-test2:
+    environment: 🥑test
+    runs-on: ubuntu-latest
+    steps:
+      - name: fedora curl testing
+        run: |
+          curl -v "https://mirrors.fedoraproject.org/metalink?repo=fedora-modular-32&arch=x86_64" 
