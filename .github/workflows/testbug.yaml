@@ -6,7 +6,7 @@ on:
 
 jobs:
   curl-test:
-    environment: newcreatedone
+    environment: a b c
     runs-on: ubuntu-latest
     steps:
       - name: fedora curl testing
