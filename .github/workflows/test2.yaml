@@ -1,7 +1,7 @@
 name: test fedora curl2
 
 on:
-  workflow_dispatch:
+  pull_request:
   # Inputs the workflow accepts.
 
 jobs:
