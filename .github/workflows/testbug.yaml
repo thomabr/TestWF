@@ -11,4 +11,18 @@ jobs:
     steps:
       - name: fedora curl testing
         run: |
+          for i in {1..10}
+            do
+              curl -v "https://mirrors.fedoraproject.org/metalink?repo=fedora-modular-32&arch=x86_64" 
+              sleep 6s
+            done
+          
+          
+  curl-test2:
+    needs: curl-test
+    environment: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: fedora curl testing
+        run: |
           curl -v "https://mirrors.fedoraproject.org/metalink?repo=fedora-modular-32&arch=x86_64" 
