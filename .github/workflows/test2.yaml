@@ -1,14 +1,17 @@
-name: test fedora curl2
-
+name: "ci"
 on:
-  pull_request:
-  # Inputs the workflow accepts.
-
+  workflow_dispatch:
+  deployment_status:
 jobs:
-  curl-test2:
-    environment: 🥑test
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: fedora curl testing
-        run: |
-          curl -v "https://mirrors.fedoraproject.org/metalink?repo=fedora-modular-32&arch=x86_64" 
+      - name: Run a one-line script
+        run: echo Hello, world!
+        # run: exit 1
+  important:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
