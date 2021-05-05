@@ -1,7 +1,7 @@
 name: "ci"
 on:
   workflow_dispatch:
-  deployment_status:
+  deployment:
 jobs:
   build:
     runs-on: ubuntu-latest
