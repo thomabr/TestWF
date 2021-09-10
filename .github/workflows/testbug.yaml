@@ -1,12 +1,23 @@
-name: "cd"
+name: ci
 on:
-  workflow_dispatch:
+ 
   push:
+    branches: [ main ]
   pull_request:
+    branches: [ main ] 
+  workflow_dispatch:
+
 jobs:
-  cd:
-    environment: staging
+
+  build:
+
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [10,12,14,15]
+    concurrency: ${{ matrix.node }}
+    environment: ${{ matrix.node }}
+        
     steps:
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - run: echo "Hi there"
+      - run: echo "${{ matrix.node }}"
