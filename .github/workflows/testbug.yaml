@@ -16,7 +16,6 @@ jobs:
       matrix:
         node: [10,12,14,15]
     concurrency: ${{ matrix.node }}
-    environment: ${{ matrix.node }}
         
     steps:
       - run: echo "Hi there"
